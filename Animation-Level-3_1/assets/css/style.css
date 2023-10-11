@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}
+
+div:nth-of-type(1) {
+  animation-name: circle;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+div:nth-of-type(2) {
+  animation: circle 4s linear 1s infinite normal forwards;
+}
+
+div:nth-of-type(3) {
+  animation: circle 4s linear 2s infinite normal forwards;
+}
+
+div:nth-of-type(4) {
+  animation: circle 4s linear 3s infinite normal forwards;
+}
+
+@keyframes circle {
+  0% {
+  }
+
+  25% {
+    background-color: red;
+    transform: translate(400px, 0);
+  }
+
+  50% {
+    background-color: yellow;
+    transform: translate(400px, 400px);
+  }
+
+  75% {
+    background-color: green;
+    transform: translate(0px, 400px);
+  }
+
+  100% {
+    background-color: blue;
+    transform: translate(0px, 0px);
+  }
+}
